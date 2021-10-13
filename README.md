@@ -1,5 +1,5 @@
-# Matt's Portfolio
-Collection of projects related to data science
+# Data Science Projects
+Collection of research and projects related to machine learning and statistical analysis
 
 # [PhD Dissertation](https://github.com/mattslatt/personal_portfolio/tree/main/dissertation)
 * Compared toxic profiles using logistic regressions
