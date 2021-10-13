@@ -1,13 +1,10 @@
 # Matt's Portfolio
 Compilation of data science projects
 
-# PhD Dissertation
-"A nano-sized dose of toxicology: elucidating the disconnect between nanomaterial dosimetry and biological effects"
-* Chapters 2 and 3 incorporate logistic regression modeling to predict pesticide toxicity
-* Chapter 4 features the classification (Naive Bayes), multidimensional scaling (PCA), and statistical analysis (t-test, ANOVA) of >20 million data points
-* Chapter 5 expands upon with additional classification (KNN) and multidimensional scaling (PCoA) techniques
-![](/img/metagenomics abstract.png)
-
+# [PhD Dissertation](https://github.com/mattslatt/personal_portfolio/tree/main/dissertation)
+* Compared toxic profiles using logistic regressions
+* Classified and clustered >20 million bacteria with Naive Bayes, PCA, and KNN models
+![](./img/metagenomics_abstract.png)
 
 # [Project 1: Music Genre Analysis](https://github.com/mattslatt/spotify)
 * Visualized genre time-series data with matplotlib and quantified changes with hypothesis testing
