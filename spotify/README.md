@@ -9,8 +9,9 @@
 * Contains genre tags for artists, and track features (danceability, acousticness, energy, etc.) for songs
 
 ## EDA
-* 298k artists have genre tags
 * >5k unique genres, most of which are associated with fewer than 100 artists
+* Dance pop, pop, rock, electro house, and classical performance are the most popular genres
+* 
 
 ![](/img/genre_count_histogram.png)
 
