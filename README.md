@@ -3,7 +3,7 @@ Collection of projects related to data science
 
 # [PhD Dissertation](https://github.com/mattslatt/personal_portfolio/tree/main/dissertation)
 * Compared toxic profiles using logistic regressions
-* Classified and clustered >20 million bacteria with Naive Bayes, PCA, and KNN models
+* Classified and clustered >20 million bacteria with Naive Bayes, PCA, and KNN techniques
 ![](./img/metagenomics_abstract.png)
 
 # [Project 1: Music Genre Analysis](https://github.com/mattslatt/spotify)
