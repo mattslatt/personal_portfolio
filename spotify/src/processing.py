@@ -35,6 +35,7 @@ def clean_tracks(data, max_artists=3):
     * artist count represents number of artists attributed to a given track
     * remove tracks with more than 3 affiliated artists
     * split tracks for each tagged artist
+    * change release date to datetime format (year)
     '''
     tracks = data[data['id_artists'] != '[]'].copy()
     tracks['id_artists_clean'] = tracks['id_artists'].str.strip("[]")
@@ -43,6 +44,7 @@ def clean_tracks(data, max_artists=3):
     tracks_split = tracks_max_artists.assign(id_artists=tracks_max_artists['id_artists_clean'].str.split(', ')).explode('id_artists')
     tracks_split['id_artists'] = tracks_split['id_artists'].str.strip("'")
     tracks_split.drop(columns=['id_artists_clean'], inplace=True)
+    tracks_split['release_date'] = pd.to_datetime(tracks_split['release_date']).dt.to_period('Y')
     print('{} total tracks'.format(data.shape[0]))
     print('{} tracks with {} or fewer artists'.format(tracks_max_artists.shape[0], max_artists))
     print('{} track-artist pairs after processing'.format(tracks_split.shape[0]))
