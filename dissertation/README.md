@@ -4,7 +4,7 @@ Here you can download my dissertation, as well as interactive visualizations (un
 # Summary
 In case you don't feel like reading 140 pages of toxicology research:
 * Humans accidentaly pollute the environment with nanoparticles
-* Modeling nanoparticle toxixity is vital to mitigating environmental harm
+* Modeling nanoparticle toxicity helps us reduce environmental harm
 * Nanoparticle size is an important feature when modeling toxicity
 
 Below are a few figures that showcase a bit of my work.
