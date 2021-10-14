@@ -5,15 +5,14 @@
 * Genre predictor and recommender to for musicophiles to find fresh artists
 
 ## Dataset
-* 1.1 million artists and 500k songs from a publicly available dataset scraped from Spotify's API
-* Contains genre tags for artists, and track features (danceability, acousticness, energy, etc.) for songs
+* 1.1 million artists with genre tags, popularity scores, and other features
+* 500k songs with track 11 acoustic features (danceability, acousticness, energy, etc.)
 
 ## EDA
-* >5k unique genres, most of which are associated with fewer than 100 artists
-* Dance pop, pop, rock, electro house, and classical performance are the most popular genres
-* 
+* 5k unique genres, most of which are associated with fewer than 100 artists
+![](./img/genre_count_histogram.png)
 
-![](/img/genre_count_histogram.png)
+* Dance pop, pop, rock, electro house, and classical performance are the most common artist genres in the dataset
+![](./img/genres_wordcloud.jpg)
 
-insert wordcloud of genres here?
 
