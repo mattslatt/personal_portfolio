@@ -14,29 +14,37 @@ Understading how music changes over time is useful for artists seeking success, 
 * 586k songs with track 11 acoustic features (danceability, energy, acousticness, speechieness, etc.)
 
 ## Exploratory Data Analysis
-There are more than 5k unique genres, most of which are associated with fewer than 100 artists. Dance pop, pop, rock, electro house, and classical performance are the most common artist genres in the dataset, whereas 
+There are more than 5k unique genres, most of which are associated with fewer than 100 artists. Dance pop, pop, rock, electro house, and classical performance are frequently tagged genres (460 to 580 artists), whereas mazandarani folk and swazi traditional are extremely rare (just 1 or 2 tagged artists).
 
 ![](./img/genre_count_histogram.png) ![](./img/genres_wordcloud.jpg)
 
-Song release dates skew heavily in favor of recent releases. There's a drop around 2000, which is likely a sampling artifact. Only half of the final year (2021) was sampled.
+This sample of tracks from the Spotify library skews in favor of recent releases, which is probably reflective of a genuine increase in annual song releases related to the  natural growth of the music industry.
 
 ![](./img/annual_song_release.png)
 
-Across all genres, features like 'acousticness' and 'energy' appear to drift over time whereas 'liveness' and others are stable (there are 8 other featuers not shown to improve clarify of the figure). The elevated variance prior to the 1960s is exacerbated by the reduced number of songs released in that period.
+Let's take a peek at some of the algorithically generated song features that Spotify provides. Features like 'acousticness' and 'energy' appear to drift over time whereas 'liveness' and others are stable (there are 8 other featuers not shown to improve clarity of the figure). The elevated variance in average scores prior to 1950 is probably due to the reduced number of songs released those years.
 
 ![](./img/annual_avg_song_features.png)
 
-What about specific genres? Let's take a look at rock music. To combine artist genre tags with song features, we have to merge the datasets. This assumes some homogeneity in the genre of any given artist's songs.
+What about specific genres? Let's take a look at rock music. Notice the outliers prior to 1950, and increased noise in the data until 1970. This tracks with what you might expect as a genre coalesces into a distinct sound.
 
 ![](./img/rock_song_features.png)
 
-Notice how 'acousticness' is declines while 'energy' increases from the late 1950's (around the birth of rock) then stabilizes in the 1980s. This tracks with the popularization of the electric guitar and popular interest in louder, more aggressive musical expression that plateaued by the 1990s.
+From 1970 to 1990, acousticness and energy appear to undergo substantial shifts. This tracks with the popularization of the electric guitar and interest in louder, more aggressive musical expression that plateaued by the 1990s.
 
 ## Hypothesis testing
-Do the statistics agree with our visual comparisons 
+Let's take a peek at how rock music appears to have changed from 1970 to 1990. Were those changes in song features statistically significant? By calculating the annual difference in each score, we can visulize the change more directly and perform a 2-sided t-test on those differences to see if they are significantly different from 0.
 
-Let's look at how music has changed in the last 50 years. We can take the year-by-year differences to run hypothesis tests on our song features.
+H0: Annual differences in the song features are equal to 0
+HA: Annual differences in the song features nre not equal to 0
+alpha = 0.05
 
-![](./img/annual_avg_song_features_diffs.png)
+![](./img/rock_avg_song_features_diffs.png)
 
-Two-sided t-tests indicate that there is a significant annual difference in 'danceability' (p=0.008) and 'acousticness' (p=0.029). Annual differences in 'energy' are not significantly different from 0 (p=0.128).
+danceability p-value: 0.882
+energy p-value: 0.078
+acousticness p-value: 0.038
+
+We reject the null hypothesis for acousticness, indicating a statistically meaningful differnce over time. We fail to reject the null hypothesis for danceability and energy.
+
+## Classifying genres
