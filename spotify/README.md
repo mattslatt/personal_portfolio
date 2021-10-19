@@ -36,15 +36,16 @@ From 1970 to 1990, acousticness and energy appear to undergo substantial shifts.
 Let's take a peek at how rock music appears to have changed from 1970 to 1990. Were those changes in song features statistically significant? By calculating the annual difference in each score, we can visulize the change more directly and perform a 2-sided t-test on those differences to see if they are significantly different from 0.
 
 H0: Annual differences in the song features are equal to 0
+
 HA: Annual differences in the song features nre not equal to 0
-alpha = 0.05
 
 ![](./img/rock_avg_song_features_diffs.png)
 
-danceability p-value: 0.882
-energy p-value: 0.078
-acousticness p-value: 0.038
+* danceability p-value: 0.882
+* energy p-value: 0.078
+* acousticness p-value: 0.038
 
 We reject the null hypothesis for acousticness, indicating a statistically meaningful differnce over time. We fail to reject the null hypothesis for danceability and energy.
 
 ## Classifying genres
+After processing and merging the track and artist datasets, we have 28 genres that are labeled with at least 10k tracks. Let's use an unsupervised clustering method to look for natural groupings of these popular genres.
