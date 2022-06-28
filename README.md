@@ -13,3 +13,10 @@ Collection of research and projects related to machine learning and statistical 
 * Highlighted podcast topics most likely to incur positive or negative audience responses based on text feature importance
 
 ![](/img/positive_text_coefficients.png)
+
+# [Project: Music Genre Analysis](https://github.com/mattslatt/personal_portfolio/tree/main/spotify)
+* Explored data from 2.1 million artists and 500k songs to analyze how genres change over time
+* Engineered novel features to recommend relatively unknown artists according to user input
+* Combined Random Forest and KNN models to predict a song’s genre based on features called from Spotify’s API
+
+![](/img/annual_avg_song_features.png)
